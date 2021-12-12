@@ -1,0 +1,231 @@
+.dl_flex{display: flex;}
+.dl_dual_button {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+  }
+  @media (max-width: 767px) {
+    .dl_dual_button {
+      width: 100%;
+    }
+  }
+  @media (max-width: 400px) {
+    .dl_dual_button {
+      flex-wrap: wrap;
+    }
+  }
+  .dl_dual_button .dl_dual_btn_one {
+    background: #2AD174;
+  }
+  .dl_dual_button .dl_dual_btn_one:before {
+    background: #2AD174;
+  }
+  .dl_dual_button .dl_dual_btn_two {
+    background: #3D9DFF;
+  }
+  .dl_dual_button .dl_dual_btn_two:before {
+    background: #3D9DFF;
+  }
+  
+  .dl_dual_rounded_style .dl_addon_dual_btn.dl_dual_btn_one {
+    border-radius: 50px 0px 0px 50px;
+  }
+  .dl_dual_rounded_style .dl_addon_dual_btn.dl_dual_btn_two {
+    border-radius: 0px 50px 50px 0px;
+  }
+  .dl_dual_rounded_style .dl_addon_dual_btn:hover.dl_dual_btn_one {
+    background: #00A449;
+  }
+  .dl_dual_rounded_style .dl_addon_dual_btn:hover.dl_dual_btn_two {
+    background: #007FFF;
+  }
+  
+  .dl_addon_dual_btn {
+    font-size: 16px;
+    line-height: 1;
+    white-space: nowrap;
+    display: inline-block;
+    padding: 25px 31px;
+    color: #fff;
+    position: relative;
+    min-width: 200px;
+    text-align: center;
+    z-index: 1;
+  }
+  @media (max-width: 767px) {
+    .dl_addon_dual_btn {
+      width: 100%;
+      min-width: inherit;
+    }
+  }
+  .dl_addon_dual_btn i {
+    margin: 0 8px;
+  }
+  .dl_addon_dual_btn i:before {
+    font-size: 18px;
+  }
+  @media (max-width: 480px) {
+    .dl_addon_dual_btn i:before {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 480px) {
+    .dl_addon_dual_btn {
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 400px) {
+    .dl_addon_dual_btn {
+      min-width: auto;
+      font-size: 14px;
+    }
+    .dl_addon_dual_btn:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+  
+  .dl_dual_skew_style .dl_addon_dual_btn {
+    background: transparent;
+  }
+  .dl_dual_skew_style .dl_addon_dual_btn:before {
+    content: "";
+    display: block;
+    height: 100%;
+    left: -16px;
+    position: absolute;
+    top: 0;
+    transform: skewX(-25deg);
+    width: 112%;
+    transition: all 0.4s linear;
+    z-index: -1;
+  }
+  @media (max-width: 400px) {
+    .dl_dual_skew_style .dl_addon_dual_btn:before {
+      transform: skewX(0deg);
+    }
+  }
+  .dl_dual_skew_style .dl_addon_dual_btn.dl_dual_btn_two:before {
+    left: 0;
+    right: -16px;
+  }
+  .dl_dual_skew_style .dl_addon_dual_btn:hover.dl_dual_btn_one:before {
+    background: #007FFF;
+  }
+  .dl_dual_skew_style .dl_addon_dual_btn:hover.dl_dual_btn_two:before {
+    background: #00A449;
+  }
+  
+  .dl_dual_border_style .dl_dual_btn_one {
+    border: 1px solid #00A449;
+    border-right: 0px;
+  }
+  .dl_dual_border_style .dl_dual_btn_two {
+    border: 1px solid #007FFF;
+    border-left-color: #fff;
+  }
+  
+  .dl_middle_text {
+    position: absolute;
+    z-index: 9;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 28px;
+    color: #333;
+    font-weight: 500;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
+    font-size: 11px;
+  }
+  
+  .dl_text_uppercase {
+    text-transform: uppercase;
+  }
+  
+.dl_dual_btn_one.reverse-right .droit-dual-button-media{
+    margin-left: 10px;
+}
+.dl_dual_btn_one.reverse-right{
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+.dl_dual_btn_one.reverse-top{
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; 
+}
+.dl_dual_btn_one.reverse-top .droit-dual-button-media{
+    flex: 100% 0 0;
+}
+.dl_dual_btn_one.reverse-bottom{
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; 
+}
+.dl_dual_btn_one.reverse-bottom .droit-dual-button-media{
+    flex: 100% 0 0;
+    order: 2;
+}
+.dl_dual_btn_one.reverse-top .droit-dual-button-media, .dl_dual_btn_one.reverse-bottom .droit-dual-button-media{
+    margin-right: 0px;
+}
+.dl_dual_btn_one.reverse-top .droit-dual-button-media{
+    margin-bottom: 6px;
+}
+.dl_dual_btn_one.reverse-bottom .droit-dual-button-media{
+    margin-top: 6px;
+}
+
+.dl_dual_btn_two.reverse-right .droit-dual-button-media{
+    margin-left: 10px;
+}
+.dl_dual_btn_two.reverse-right{
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+.dl_dual_btn_two.reverse-top{
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; 
+}
+.dl_dual_btn_two.reverse-top .droit-dual-button-media{
+    flex: 100% 0 0;
+}
+.dl_dual_btn_two.reverse-bottom{
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; 
+}
+.dl_dual_btn_two.reverse-bottom .droit-dual-button-media{
+    flex: 100% 0 0;
+    order: 2;
+}
+.dl_dual_btn_two.reverse-top .droit-dual-button-media, .dl_dual_btn_two.reverse-bottom .droit-dual-button-media{
+    margin-right: 0px;
+}
+.dl_dual_btn_two.reverse-top .droit-dual-button-media{
+    margin-bottom: 6px;
+}
+.dl_dual_btn_two.reverse-bottom .droit-dual-button-media{
+    margin-top: 6px;
+}
+
+.dl-dual-button-wrapper-pro .dl_addon_dual_btn:hover.dl_addon_dual_btn span{
+    color: #fff;
+}

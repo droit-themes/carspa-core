@@ -1,0 +1,189 @@
+
+/*Pricing Style Start ----------------------------------------------------*/
+.dl_feature_list_table img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.dl_feature_list_table .dl_table_nav {
+    display: flex;
+    top: 0px;
+    z-index: 10;
+    padding-bottom: 14px;
+}
+@media (min-width: 768px) {
+    .dl_feature_list_table .dl_table_nav {
+        display: none;
+   }
+}
+.dl_feature_list_table button {
+    list-style: none;
+    flex: 1;
+}
+.dl_feature_list_table button:last-child {
+    border-right: 1px solid #f5f5f5;
+}
+.dl_feature_list_table button {
+    width: 100%;
+    border: 1px solid #f5f5f5;
+    border-right: 0;
+    padding: 10px;
+    background: #fff;
+    height: 65px;
+}
+.dl_feature_list_table button.active {
+    background: #f5f5f5;
+    color: #000;
+}
+.dl_feature_list_table table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+}
+.dl_feature_list_table th {
+    background: #f5f5f5;
+    display: none;
+}
+.dl_feature_list_table td, .dl_feature_list_table th {
+    border: 1px solid #e7f0fa;
+    
+    empty-cells: show;
+    font-size: 15px;
+    font-weight: 400;
+}
+.dl_feature_list_table td, .dl_feature_list_table th {
+    text-align: left;
+}
+.dl_feature_list_table td + td, .dl_feature_list_table th + th {
+    text-align: center;
+    display: none;
+}
+.dl_feature_list_table td.default {
+    display: table-cell;
+}
+.dl_feature_list_table .dl_hide {
+    border: 0;
+    background: none;
+}
+.dl_feature_list_table td, .dl_feature_list_table th {
+    background-color: #0e4de3;
+    border: 0px solid transparent;
+    color: #fff;
+}
+.dl_feature_list_table td + td, .dl_feature_list_table th + th {
+    background-color: #fff;
+    
+    color: #111;
+}
+.dl_feature_list_table table thead tr th:not(:last-child),
+.dl_feature_list_table table tbody tr td:not(:last-child){
+    border-right: 1px solid #ededed
+}
+.dl_feature_list_table td .feature-content{
+    border-bottom: 1px solid #ededed;
+    margin: 0 25px 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dl_cu_btn {
+    display: inline-block;
+    padding: 12px 31px;
+    line-height: 19px;
+    font-size: 14px;
+    font-weight: 500;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    border-radius: 5px;
+}
+.dl_cu_btn.xl_btn {
+    padding: 15px 40px;
+    min-width: auto;
+    line-height: 18px;
+}
+.dl_cu_btn.dark_bg {
+    background-color: #000;
+    border: 1px solid #000;
+    color: #fff;
+}
+.dl_cu_btn.dark_bg:hover {
+    background-color: #0E4DE3;
+    border: 1px solid #0E4DE3;
+}
+.dl_feature_list_table th + th .dl_price span {
+    border: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+.dl_feature_list_table table{
+    margin-bottom: 0;
+}
+.dl_feature_list_table th + th .dl_price {
+    font-size: 50px;
+    font-weight: 500;
+    color: #222222;
+    display: flex;
+    line-height: 0.6;
+    justify-content: center;
+    margin-top: 45px;
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+    .dl_pricing_plan.dl_style_04 .dl_price {
+      font-size: 32px;
+    }
+  }
+  .dl_feature_list_table th + th .dl_price .dl_currancy {
+    font-size: 18px;
+    margin-right: 8px;
+    align-self: flex-start;
+  }
+  .dl_feature_list_table th + th .dl_price_duration {
+    font-size: 15px;
+    color: #44515B;
+    font-weight: 500;
+    margin-left: 10px;
+    align-self: flex-end;
+  }
+.dl_feature_list_table tbody tr:last-child td + td {
+    padding: 25px 0;
+}
+
+@media (min-width: 768px) {
+    .dl_feature_list_table td, .dl_feature_list_table th {
+        display: table-cell !important;
+   }
+    .dl_feature_list_table td, .dl_feature_list_table th {
+        width: 330px;
+        
+   }
+    .dl_feature_list_table td + td, .dl_feature_list_table th + th {
+        width: auto;
+   }
+}
+
+.is_popular {
+   background: #EE3131;
+    color: #FFFFFF;
+    font-size: 10px;
+    max-width: 150px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 3px 15px 3px 15px;
+}
+
+.price_popular_is {
+    position: relative;
+}
+
+.dl_price_title.text-center{
+    color: #222222;
+    font-size: 18px;
+   font-weight:500;
+}
+
+
+
+/*Pricing Style End ----------------------------------------------------*/

@@ -1,0 +1,259 @@
+
+.dl_style_12 .dl_tab_menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .dl_style_12 .dl_tab_menu .dl_tab_menu_item {
+    margin-right: 65px;
+  }
+  .dl_style_12 .dl_tab_menu .dl_tab_menu_item .post__tab--title {
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+  .dl_style_12 .dl_tab_menu .dl_tab_menu_item .post__tab--title:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -1px;
+    left: 0;
+    transform: scale(0);
+    transform-origin: left;
+    transition: all 0.3s linear;
+  }
+  
+  .dl_style_12 .dl_tab_menu .dl_tab_menu_item.dl_active .post__tab--title:before, .dl_style_12 .dl_tab_menu .dl_tab_menu_item.active-default .post__tab--title:before, .dl_style_12 .dl_tab_menu .dl_tab_menu_item:hover .post__tab--title:before {
+    transform: scale(1);
+  }
+  .dl_style_12 .dl_tab_menu .dl_tab_menu_item:last-child {
+    margin-right: 0;
+  }
+
+  .dl_tab_item {
+    display: flex;
+    align-items: flex-start;
+  }
+  .dl_tab_item .dl_tab_thumb {
+    width: 170px;
+    overflow: hidden;
+  }
+  .dl_tab_item .dl_tab_content_inner {
+    flex: 1;
+  }
+ 
+.dl_hover_style1 {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  display: inline-block;
+}
+.dl_hover_style1:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: all 0.5s linear;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-property: transform;
+  z-index: -1;
+}
+
+.dl_hover_style1 i {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.dl_hover_style1:hover:after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.dl_travel_btn:after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.dl_travel_btn:hover:after {
+  transform: scaleX(0);
+  transform-origin: right;
+}
+.dl_travel_btn{
+  background: transparent;
+}
+@media (max-width:991px){
+  .dl_style_12 .dl_tab_menu .dl_tab_menu_item {
+          margin-right: 10px;
+          margin-top: 10px;
+      }
+  }
+  
+@media (max-width:480px){
+    .dl_tab_item{
+        display: block;
+    }
+    .dl_tab_item .dl_tab_content_inner{
+        margin-top: 25px;
+    }
+}
+/*=========== travel_gallery_area css =============*/
+
+.dl_travel_gallery_area .grid-item {
+  padding: 0px 5px;
+}
+
+.dl_travel_gallery_item {
+  margin-bottom: 10px;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+}
+.dl_travel_gallery_item .dl-overlay_bg {
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 0;
+}
+.dl_travel_gallery_item.two .dl_overlay_bg {
+  background: rgba(0, 0, 0, 0.5);
+}
+.dl_travel_gallery_item.three .dl_overlay_bg {
+  background: rgba(0, 0, 0, 0.3);
+}
+.dl_travel_gallery_item img {
+  max-width: 100%;
+}
+.dl_travel_gallery_item .dl_travel_gallery_content {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  padding: 15px;
+  font-family: "neuzeit-grotesk";
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  top: 0;
+}
+.dl_travel_gallery_item .dl_travel_gallery_content .droit-blog-entry-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0;
+  transform: translateY(44px);
+  transition: all 0.3s linear;
+  margin-top: 0;
+}
+.dl_travel_gallery_item .dl_travel_gallery_content p {
+  font-size: 16px;
+  color: #fff;
+}
+.droit__blog-meta{
+  margin-bottom: 1.5rem;
+}
+.droit__blog-meta .droit-blog-entry-author, .droit__blog-meta .droit-blog-entry-date, .droit__blog-meta .droit-blog-entry-time, .droit__blog-meta .droit-blog-entry-comments{
+  font-size: 16px;
+  color: #fff;
+  
+}
+.dl_travel_gallery_item .dl_travel_gallery_content p,
+.dl_travel_gallery_item .dl_travel_gallery_content .dl_travel_btn,.droit__blog-meta{
+  animation: fadeOut 0.3s linear both;
+}
+.dl_travel_gallery_item .dl_travel_gallery_content .dl_travel_btn {
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  background: #fff;
+  color: #181b31;
+  border: 0px;
+  padding: 6px 18px 3px;
+  display: inline-block;
+}
+.dl_travel_gallery_item .dl_travel_gallery_content .dl_travel_btn:after {
+  background: #ff6969;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+.dl_travel_gallery_item .dl_travel_gallery_content .dl_travel_btn:hover {
+  color: #fff;
+}
+.dl_travel_gallery_item .dl_travel_gallery_content .dl_travel_btn:hover:after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.dl_travel_gallery_item:hover .dl_travel_gallery_content .droit-blog-entry-title {
+  transform: translateY(0px);
+}
+.dl_travel_gallery_item:hover .dl_travel_gallery_content p,
+.dl_travel_gallery_item:hover .dl_travel_gallery_content .dl_travel_btn,.dl_travel_gallery_item:hover .droit__blog-meta{
+  animation: fadeInUp 0.3s linear both;
+}
+
+.dl_hover_style1 {
+  background: #ff4d6f;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  display: inline-block;
+  line-height: 30px;
+}
+.dl_hover_style1:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.dl_hover_style1:after {
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: all 0.5s linear;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-property: transform;
+  z-index: -1;
+  background: #3740ff;
+}
+.dl_hover_style1 i {
+  font-size: 12px;
+  margin-left: 5px;
+}
+.dl_hover_style1:hover {
+  color: #fff;
+}
+.dl_hover_style1:hover:after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.dl_travel_btn {
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 0.8px;
+  padding: 10px 35px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: transparent;
+  border: 1px solid #ff6969;
+}
+.dl_travel_btn:after {
+  background: #ff6969;
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.dl_travel_btn:hover {
+  color: #ff6969;
+}
+.dl_travel_btn:hover:after {
+  transform: scaleX(0);
+  transform-origin: right;
+}
+/*=========== travel_gallery_area css =============*/

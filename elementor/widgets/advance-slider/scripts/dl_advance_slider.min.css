@@ -1,0 +1,36 @@
+
+.dl_advance_slider_wrapper .dl_adv_swiper_navigation .swiper_adv_button_next, .dl_advance_slider_wrapper .dl_adv_swiper_navigation .swiper_adv_button_prev {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #111;
+    background-color: #111;
+    color: #fff;
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    z-index: 9;
+    cursor: pointer;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+.dl_adv_swiper_navigation {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.dl_adv_swiper_navigation .swiper_adv_nav_button:not(:last-child) {
+    margin-right: 10px;
+}
+.dl_advance_slider_wrapper{
+    position: relative;
+}
+.dl_swiper_adv_pagination {
+    display: flex;
+}
+.dl_adv_swiper_navigation .swiper_adv_nav_button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}

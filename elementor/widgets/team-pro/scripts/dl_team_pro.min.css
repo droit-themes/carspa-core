@@ -1,0 +1,98 @@
+.dl-team-member-wrapper-pro {
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+}
+.dl-team-member-wrapper-pro .dl_team_member_thumb {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.dl-team-member-wrapper-pro .dl_team_member_thumb img {
+  border-radius: 5px 5px 0 0;
+}
+.dl-team-member-wrapper-pro .dl_team_member_info {
+  padding: 40px;
+  position: relative;
+  width: 100%;
+}
+.dl-team-member-wrapper-pro .dl_name {
+  color: #333333;
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  margin-top: 0;
+  z-index: 9;
+  position: relative;
+}
+.dl-team-member-wrapper-pro.layout-mode-bottom .dl_team_member_info {
+  top: auto;
+}
+.dl-team-member-wrapper-pro .dl_team_member_thumb:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+}
+.dl-team-member-wrapper-pro .dl_position {
+  color: #959b9f;
+  font-size: 15px;
+  text-transform: capitalize;
+  letter-spacing: inherit;
+  font-weight: 400;
+  margin-top: 0;
+  line-height: 1.6;
+  z-index: 9;
+  position: relative;
+}
+.dl-team-member-wrapper-pro .dl_team_desc p {
+  color: #6a6a6a;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 28px;
+  z-index: 9;
+  position: relative;
+}
+.dl-team-member-wrapper-pro .dl_social_icon {
+  margin-top: 27px;
+}
+.dl-team-member-wrapper-pro .dl_social_icon a {
+  font-size: 20px;
+  color: #b3bec5;
+  margin: 0 10px;
+  z-index: 9;
+  position: relative;
+}
+.dl-team-member-wrapper-pro .dl_social_icon a:hover {
+  color: #0e4de3;
+}
+.dl-team-member-wrapper-pro.layout-mode-left,
+.dl-team-member-wrapper-pro.layout-mode-right,
+.dl-team-member-wrapper-pro.layout-mode-bottom {
+  display: flex;
+}
+.dl-team-member-wrapper-pro.layout-mode-left .dl_team_member_thumb,
+.dl-team-member-wrapper-pro.layout-mode-right .dl_team_member_thumb {
+  flex: 50% 0 0;
+}
+.dl-team-member-wrapper-pro.layout-mode-right {
+  flex-direction: row-reverse;
+}
+.dl-team-member-wrapper-pro.layout-mode-bottom {
+  flex-direction: column-reverse;
+}
+.elementor-widget-droit-teams .elementor-widget-container {
+  overflow: hidden;
+}
+.dl-team-member-wrapper-pro.layout-mode-left .dl_team_member_thumb img,
+.dl-team-member-wrapper-pro.layout-mode-right .dl_team_member_thumb img {
+  object-fit: cover;
+}
+/* .droit__pro_team{
+  overflow: hidden;
+} */

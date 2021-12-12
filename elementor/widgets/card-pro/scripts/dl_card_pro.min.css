@@ -1,0 +1,126 @@
+.dl_portfolio_item {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  cursor: pointer;
+}
+.dl_portfolio_item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
+  transition: opacity 0.2s linear;
+  z-index: 1;
+}
+.dl_portfolio_item img {
+  max-width: 100%;
+  transition: all 0.9s;
+  position: relative;
+  vertical-align: middle;
+  z-index: 0;
+}
+@media (min-width: 1922px) {
+  .dl_portfolio_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.dl_portfolio_item:hover:before {
+  opacity: 0.7;
+}
+.dl_portfolio_item:hover img {
+  transform: scale(1.05);
+}
+.dl_portfolio_item:hover .dl_portfolio_details {
+  transform: translateY(-50%);
+}
+.dl_portfolio_item:hover .dl_portfolio_details .dl_card_desc {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 0.5s;
+}
+.dl_portfolio_item:hover .dl_portfolio_details .dl_br_bottom {
+  opacity: 1;
+}
+
+.dl_portfolio_details {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-9%);
+  overflow: hidden;
+  transition: all 0.3s linear;
+  z-index: 2;
+}
+.dl_portfolio_details .dl_hover_content {
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.dl_portfolio_details .dl_br_bottom {
+  display: block;
+  margin: 0 auto;
+  opacity: 0;
+  transition: all 0.2s, width 0.8s;
+}
+.dl_portfolio_details .dl_card_desc {
+  transition: all 0.4s;
+  opacity: 0;
+  transform: translateY(100%);
+}
+.dl_pro_card_btn .dl_card_btn {
+  display: inline-block;
+}
+.dl_pro_card_btn .dl_card_btn{
+  display: inline-block;
+}
+
+.dl-pro-card-content.dl_card_content_left{
+  align-items: center;
+}
+.dl-pro-card-content.dl_card_content_right{
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.dl-pro-card-content.dl_card_content_top{
+  flex-direction: column;
+}
+.dl-pro-card-content.dl_card_content_bottom{
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.dl_pro_card_content_wrapper{
+  margin: 0 auto;
+}
+.dl_pro_card_content_wrapper .dl_title{
+  color: #111;
+  font-size: 20px;
+}
+.dl_pro_card_content_wrapper .dl_pro_card_desc{
+  color: #111;
+  font-size: 16px;
+}
+.dl_pro_card_content_wrapper .dl_btn{
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  line-height: 19px;
+  font-weight: 500;
+  z-index: 1;
+  background: rgb(255, 95, 95);
+  padding: 12px 25px;
+  border-radius: 5px;
+}
+.dl-pro-card-content .dl_pro_card_img {
+  width: 100%;
+  display: flex;
+}
+.dl_flex {
+  display: flex;
+}

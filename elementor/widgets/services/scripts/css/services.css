@@ -1,0 +1,283 @@
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+
+.aligncenter {
+    display: block;
+    margin: 0 auto 15px;
+}
+
+a:focus {
+    outline: 0 solid;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    font-weight: 300;
+    
+}
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.9;
+    font-weight: 300;
+    color: #565;
+    font-size: 15px;
+}
+
+
+
+a:hover {
+    text-decoration: none;
+}
+
+.section-paddin {
+    padding: 200px 0;
+    background: #FFF2F2;
+}
+
+h2.title {
+    font-family: Rubik;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+p.content {
+    font-family: Rubik;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.sub-content {
+    background: #EE3232;
+    padding: 35px;
+    color: #fff;
+}
+
+.single-col-min .icon {
+    background: #fff;
+    padding: 25px 20px;
+    display: inline;
+    border-radius: 40px;
+    position: absolute;
+    right: 20px;
+    top: 265px;
+}
+
+.single-col-min {
+    position: relative;
+}
+
+.single-col-min h3 {
+    margin-top: 50px;
+    font-family: Rubik;
+    margin-bottom: 60px;
+    font-size: 38px;
+    line-height: 55px;
+}
+
+.single-col-min p {
+    font-family: Rubik;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 70px;
+}
+
+.single-col-min a.btn {
+    color: #fff;
+}
+
+.single-col-min i.fas.fa-long-arrow-alt-right {
+    position: relative;
+    top: 2px;
+    left: 10px;
+}
+
+.sub-content-2 h4 {
+    font-family: Rubik;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: -45px;
+}
+
+.sub-content-2 p {
+    font-family: Rubik;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.sub-content-2 a.btn {
+    color: #EE3232;
+    font-size: 14px;
+    font-family: Rubik;
+    font-weight: 500;
+    margin-bottom: 15px !important;
+}
+
+.sub-content-2 {
+    background: #fff;
+    padding: 0px 20px 20px 30px;
+    width: 91%;
+    position: relative;
+    top: -141px;
+    right: -35px;
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.1);
+}
+
+.sub-content-2 i.fas.fa-long-arrow-alt-right {
+    position: relative;
+    top: 2px;
+    left: 10px;
+}
+
+.single-col img.icon {
+    background: #EE3232;
+    padding: 25px 25px;
+    border-radius: 50px;
+    display: inline;
+    position: relative;
+    top: -44px;
+    right: -190px;
+}
+
+.single-col {
+    margin-bottom: -100px;
+}
+
+span.line {
+    display: inline-block;
+    height: 3px;
+    width: 50px;
+    background: #EE3131;
+    margin-bottom: 10px;
+}
+
+.single-col.mark img.imm {
+    height: 310px;
+}
+
+.single-col.mark img.icon {
+    right: -185px;
+}
+img.service_img {
+    max-height: 305px;
+}
+
+
+/* MEDIUM LAYOUT: 1280PX */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  
+}
+
+
+/* TABLET LAYOUT: 768PX */
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+    .single-col-min .icon {
+        right: 17px;
+        top: 145px;
+    }
+
+    .sub-content-2 {
+        padding: 0px 15px;
+        width: 97%;
+        position: relative;
+        top: -100px;
+        right: -20px;
+        margin-bottom: 22px;
+        padding-top: 25px;
+        }
+   
+        .single-col img.icon {
+            padding: 7px 7px;
+            border-radius: 41px;
+            top: -55px;
+            right: -115px;
+            width: 50px;
+        }
+
+    .sub-content {
+        padding: 15px;
+    }
+
+    .single-col-min p {
+        margin-bottom: 40px;
+    }
+
+    .single-col.mark img.imm {
+        height: 185px;
+    }
+
+    .single-col.mark img.icon {
+        right: -110px;
+    }
+
+}
+
+
+/* MOBILE LAYOUT: 320PX */
+@media only screen and (max-width: 375px){
+    .single-col.mark img.icon{
+        right: -212px;
+    }
+
+    .col-md-4.margin {
+        margin-bottom: 20px;
+    }
+
+    .sub-content-2 {
+        width: 100%;
+        top: -125px;
+        right: 0px;
+    }
+
+    .single-col img.icon {
+        right: -215px;
+    }
+   
+    
+    
+}
+@media only screen and (max-width: 320px) {
+    .single-col.mark img.icon {
+        right: -188px;
+    }
+
+    .single-col img.icon {
+        padding: 10px 10px;
+        right: -190px;
+        top: -30px;
+        width: 25%;
+    }
+
+    .single-col-min .icon {
+        top: 215px;
+    }
+    
+    
+
+}
+
+/* WIDE MOBILE LAYOUT: 480PX */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+}

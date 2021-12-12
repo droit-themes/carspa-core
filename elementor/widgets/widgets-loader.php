@@ -34,18 +34,6 @@ class Widgets_Loader{
 
         return apply_filters('drth_elementor_widgets_loading', [
             
-            'advanced-accordion' => [
-                'title' => __( 'Advanced Accordion', 'carspa-core' ),
-                'js' => [''],
-                'css' => [''],
-                'source' => 'addons',
-            ],
-            'advance-pricing' => [
-                'title' => __( 'Advanced Pricing', 'carspa-core' ),
-                'js' => [''],
-                'css' => [''],
-                'source' => 'addons',
-            ],
             'advance-slider' => [
                 'title' => __( 'Advanced Slider', 'carspa-core' ),
                 'js' => [''],
@@ -63,59 +51,6 @@ class Widgets_Loader{
                 'css' => ['compare/css/twentytwenty.css'],
                 'source' => 'addons',
             ],
-            
-            'subscriber' => [
-                'title' => __( 'Subscriber', 'carspa-core' ),
-                'js' => [''],
-                'css' => [''],
-                'vendor' => [
-                    'css' => [],
-                    'js'  => ['dl_addons_subscriber']
-                ],
-                'source' => 'addons',
-            ],
-            'advanced-tab' => [
-                'title' => __( 'Advanced Tab', 'carspa-core' ),
-                'js' => [''],
-                'css' => [''],
-                'source' => 'addons',
-            ],
-            'team-pro' => [
-                'title' => __( 'Team Pro', 'carspa-core' ),
-                'js' => [''],
-                'css' => [''],
-                'vendor' => [
-                    'css' => [],
-                    'js'  => ['jquery-parallax-move', 'jquery-parallax']
-                ],
-                'source' => 'addons',
-            ],
-
-            'testimonial-pro' => [
-                'title' => __( 'Testimonial Pro', 'carspa-core' ),
-                'js' => [''],
-                'css' => [''],
-                'vendor' => [
-                    'css' => ['swiper'],
-                    'js'  => ['swiper', 'jquery-parallax-move', 'jquery-parallax']
-                ],
-                'source' => 'addons',
-            ],
-
-            'video-popup' => [
-                'title' => __( 'Video Popup', 'carspa-core' ),
-                'js' => ['magnific-popup/magnific.js'],
-                'css' => [''],
-                'source' => 'addons',
-            ],
-
-
-            'pricing-pro' => [
-                'title' => __( 'Pricing Pro', 'carspa-core' ),
-                'js' => [''],
-                'css' => [''],
-                'source' => 'addons',
-            ],
 
             'breadcrumbs' => [
                 'title' => __( 'Breadcrumbs', 'carspa-core' ),
@@ -129,15 +64,7 @@ class Widgets_Loader{
                 'js' => [''],
                 'css' => [''],
                 'source' => 'addons',
-            ],
-
-            'filter-gallery' => [
-                'title' => __( 'Filter Gallery', 'carspa-core' ),
-                'js' => ['isotope.pkgd.js'],
-                'css' => [''],
-                'source' => 'local',
-            ],
-            
+            ],            
             'services' => [
                 'title' => __( 'Services', 'carspa-core' ),
                 'js' => ['js/services.js'],
@@ -150,6 +77,17 @@ class Widgets_Loader{
                 'js' => ['js/pricing.js'],
                 'css' => ['css/pricing.css'],
                 'source' => 'local',
+            ],
+            'nav' => [
+                'title' => __( 'carspa Nav', 'carspa-core' ),
+                'js' => [''],
+                'css' => ['css/nav.css'],
+            ],
+
+            'sitelogo' => [
+                'title' => __( 'Site Logo', 'carspa-core' ),
+                'js' => [''],
+                'css' => ['css/sitelogo.css'],
             ],
 
         ]);

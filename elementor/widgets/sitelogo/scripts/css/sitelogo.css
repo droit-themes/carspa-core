@@ -1,0 +1,20 @@
+/**=== Custom Site Logo ===**/
+.drdt_site_logo {
+    display: flex;
+    justify-content: center;
+}
+.drdt_site_logo .drdt_custom_site_logo img  {
+    display: block;
+    transition: all 0.2s linear;
+    max-width: 100%;
+}
+.drdt_menu_fixed .drdt_site_logo .drdt_custom_site_logo img,
+.drdt_site_logo .drdt_custom_site_logo img + img {
+    display: none;
+}
+.drdt_menu_fixed .drdt_site_logo .drdt_custom_site_logo img + img {
+    display: block;
+}
+.drdt_navmenu a {
+    display: inline-block;
+}

@@ -1174,7 +1174,7 @@ class DRTH_ESS_nav extends Widget_Base {
         'menu_class'  => 'drdt_navmenu',
         'fallback_cb' => '__return_empty_string',
         'container'   => '',
-        'walker'      => new \carspacore\Framework\Menu_Walker,
+        'walker'      => new \Carspacore\Framework\Menu_Walker,
     ];
 
     $menu_html = wp_nav_menu( $args );

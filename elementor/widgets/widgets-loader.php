@@ -1,8 +1,8 @@
 <?php
-namespace TH_ESSENTIAL\Elementor;
+namespace Carspacore\Elementor;
 defined( 'ABSPATH' ) || exit;
 
-use \TH_ESSENTIAL\DRTH_Plugin as DR_Plugin;
+use \Carspacore\DRTH_Plugin as DR_Plugin;
 
 class Widgets_Loader{
 
@@ -88,6 +88,11 @@ class Widgets_Loader{
                 'title' => __( 'Site Logo', 'carspa-core' ),
                 'js' => [''],
                 'css' => ['css/sitelogo.css'],
+            ],
+            'searchbar' => [
+                'title' => __( 'Carspa Search', 'carspa-core' ),
+                'js' => ['js/custome.js'],
+                'css' => ['css/searchbar.css'],
             ],
 
         ]);

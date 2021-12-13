@@ -1,5 +1,5 @@
 <?php
-namespace TH_ESSENTIAL;
+namespace Carspacore;
 defined( 'ABSPATH' ) || exit;
 
 final class DRTH_Plugin{

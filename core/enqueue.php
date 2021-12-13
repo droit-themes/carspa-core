@@ -1,5 +1,5 @@
 <?php
-namespace TH_ESSENTIAL\Manager;
+namespace Carspacore\Manager;
 defined( 'ABSPATH' ) || exit;
 
 class Enqueue{

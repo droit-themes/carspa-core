@@ -36,5 +36,5 @@ add_action( 'plugins_loaded', function(){
     load_plugin_textdomain( 'carspa-core', false, basename( dirname( __FILE__ ) ) . '/languages'  );
     
     // load plugin instance
-    \TH_ESSENTIAL\DRTH_Plugin::instance()->load();
+    \Carspacore\DRTH_Plugin::instance()->load();
 }, 999); 

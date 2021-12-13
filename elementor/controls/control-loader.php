@@ -1,9 +1,9 @@
 <?php
-namespace TH_ESSENTIAL\Elementor;
+namespace Carspacore\Elementor;
 defined( 'ABSPATH' ) || exit;
 
-use \TH_ESSENTIAL\DRTH_Plugin as DR_Plugin;
-use \TH_ESSENTIAL\Elementor\Loader as DR_Elementor;
+use \Carspacore\DRTH_Plugin as DR_Plugin;
+use \Carspacore\Elementor\Loader as DR_Elementor;
 
 class Control_Loader{
 

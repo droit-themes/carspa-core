@@ -52,6 +52,13 @@ class Widgets_Loader{
                 'source' => 'addons',
             ],
 
+            'advanced-tab' => [
+                'title' => __( 'Advanced Tab', 'carspa-core' ),
+                'js' => [''],
+                'css' => [''],
+                'source' => 'addons',
+            ],
+
             'breadcrumbs' => [
                 'title' => __( 'Breadcrumbs', 'carspa-core' ),
                 'js' => [''],
@@ -64,7 +71,8 @@ class Widgets_Loader{
                 'js' => [''],
                 'css' => [''],
                 'source' => 'addons',
-            ],            
+            ], 
+
             'services' => [
                 'title' => __( 'Services', 'carspa-core' ),
                 'js' => ['js/services.js'],
@@ -78,6 +86,7 @@ class Widgets_Loader{
                 'css' => ['css/pricing.css'],
                 'source' => 'local',
             ],
+
             'nav' => [
                 'title' => __( 'carspa Nav', 'carspa-core' ),
                 'js' => [''],
@@ -89,6 +98,7 @@ class Widgets_Loader{
                 'js' => [''],
                 'css' => ['css/sitelogo.css'],
             ],
+            
             'searchbar' => [
                 'title' => __( 'Carspa Search', 'carspa-core' ),
                 'js' => ['js/custome.js'],

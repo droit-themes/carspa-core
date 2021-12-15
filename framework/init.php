@@ -23,8 +23,8 @@ function register_admin_page_for_header_footer() {
     );
 }
 
-$custom_postype->dt_postype('header', 'Header', 'Headers', array('title', 'editor', 'elementor'), 'carspa-header-footer');
-$custom_postype->dt_postype('footer', 'Footer', 'Footers', array('title', 'editor', 'elementor'), 'carspa-header-footer');
+$custom_postype->dt_postype('header', 'Header', 'Headers', array( 'elementor'), 'carspa-header-footer');
+$custom_postype->dt_postype('footer', 'Footer', 'Footers', array( 'elementor'), 'carspa-header-footer');
 
 //  Get header footer id
 
@@ -61,5 +61,19 @@ function header_footer_template_id($postype, $post_id) {
     }
     return $template_id;
 }
+//  add by default postype
 
+function carspa_header_footer_add_cpt_support() {
+
+	//if exists, assign to $cpt_support var
+	$cpt_support = get_option( 'elementor_cpt_support' );
+
+	//check if option DOESN'T exist in db
+	if( ! $cpt_support ) {
+		$cpt_support = [ 'header', 'footer']; //create array of our default supported post types
+		update_option( 'elementor_cpt_support', $cpt_support ); //write it to the database
+	}
+	
+}
+add_action( 'after_switch_theme', 'carspa_header_footer_add_cpt_support' );
 

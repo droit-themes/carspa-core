@@ -21,8 +21,10 @@ class Dt_CustomPosttype {
         add_action('init', array($this, 'register_custom_post'));
     }
 
-    public function dt_postype( $type, $singular_label, $plural_label, $settings = array() ){
-        
+    public function dt_postype( $type, $singular_label, $plural_label, $settings = array(), $show_in_menu = '' ){
+        if('' != $show_in_menu) {
+	        $default_settings['show_in_menu'] = $show_in_menu;
+        }
         $default_settings = array(
             'labels' => array(
                 'name' => __($plural_label, 'carspa-core'),
@@ -50,6 +52,9 @@ class Dt_CustomPosttype {
                 'slug' => sanitize_title_with_dashes($plural_label)
             )
         );
+	    if('' != $show_in_menu) {
+		    $default_settings['show_in_menu'] = $show_in_menu;
+	    }
         $this->dt_posts[$type] = array_merge($default_settings, $settings);
     }
 

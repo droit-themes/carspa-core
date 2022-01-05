@@ -105,6 +105,14 @@ class Widgets_Loader{
                 'css' => ['css/searchbar.css'],
             ],
 
+            'subscriber' => [
+                'title' => __( 'subscriber', 'carspa-core' ),
+                'js' => [''],
+                'css' => [''],
+                'source' => 'addons',
+            ],
+
+
         ]);
     }
 

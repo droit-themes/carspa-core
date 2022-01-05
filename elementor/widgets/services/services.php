@@ -299,7 +299,7 @@ class DRTH_ESS_Services extends Widget_Base{
 
     <div class="all-col">
         <div class="row">
-            <div class="col-md-4 margin">
+            <div class="col-lg-4 margin">
              <?php
                 while ( $blogFeature->have_posts() ) {
                 $blogFeature->the_post();
@@ -319,14 +319,14 @@ class DRTH_ESS_Services extends Widget_Base{
                  wp_reset_postdata();
                 ?>
             </div>
-            <div class="col-md-8">
+            <div class="col-lg-8">
                 <div class="row">  
                     <?php
                         while ( $blogPost->have_posts() ) {
                         $blogPost->the_post();
                         $service_icon_images     = function_exists( 'get_field' ) ? get_field( 'service_icon_images' ) : '';
                     ?>
-                        <div class="col-md-6">
+                        <div class="col-lg-6">
                             <div class="fung-2">
                                 <div class="single-col">
                                    <?php the_post_thumbnail('full', array('class' => 'service_img')); ?>

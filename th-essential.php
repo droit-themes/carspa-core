@@ -29,6 +29,7 @@ define('DRO_TH_ESS_CSS_RENDER', true);
 
 include __DIR__ . '/function.php';
 include __DIR__ . '/plugin.php';
+include __DIR__ . '/wp-widgets/widgets.php';
 
 // load plugin
 add_action( 'plugins_loaded', function(){

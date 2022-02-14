@@ -118,6 +118,10 @@ class DRTH_ESS_Pricing_Theme extends Widget_Base {
 						'title' => __( 'Text', 'droit_portfolio' ),
 						'icon' => 'fa fa-font',
 					],
+					'icon' => [
+						'title' => __( 'Icon', 'droit-addons-pro' ),
+						'icon' => 'fa fa-surprise',
+					],
 					'image' => [
 						'title' => __( 'Image', 'droit_portfolio' ),
 						'icon' => 'fa fa-image',
@@ -136,6 +140,16 @@ class DRTH_ESS_Pricing_Theme extends Widget_Base {
 				'default' => 'MultiPurpose Theme',
 				'condition' => [
 					'features_type' => 'text'
+				]
+			]
+		);
+		$pricing_repeater->add_control(
+			'plan_icon',
+			[
+				'label'     => __( 'Icon', 'droit-elementor-addons' ),
+				'type'      => \Elementor\Controls_Manager::ICONS,
+				'condition' => [
+					'features_type' => 'icon'
 				]
 			]
 		);
@@ -167,6 +181,10 @@ class DRTH_ESS_Pricing_Theme extends Widget_Base {
 						'title' => __( 'Text', 'droit_portfolio' ),
 						'icon' => 'fa fa-font',
 					],
+					'icon' => [
+						'title' => __( 'Icon', 'droit-addons-pro' ),
+						'icon' => 'fa fa-surprise',
+					],
 					'image' => [
 						'title' => __( 'Image', 'droit_portfolio' ),
 						'icon' => 'fa fa-image',
@@ -185,6 +203,16 @@ class DRTH_ESS_Pricing_Theme extends Widget_Base {
 				'default' => 'MultiPurpose Theme',
 				'condition' => [
 					'advance_features_type' => 'text'
+				]
+			]
+		);
+		$pricing_repeater->add_control(
+			'advance_pack_body_icon',
+			[
+				'label'     => __( 'Icon', 'droit-elementor-addons' ),
+				'type'      => \Elementor\Controls_Manager::ICONS,
+				'condition' => [
+					'advance_features_type' => 'icon'
 				]
 			]
 		);
@@ -216,6 +244,10 @@ class DRTH_ESS_Pricing_Theme extends Widget_Base {
 						'title' => __( 'Text', 'droit_portfolio' ),
 						'icon' => 'fa fa-font',
 					],
+					'icon' => [
+						'title' => __( 'Icon', 'droit-addons-pro' ),
+						'icon' => 'fa fa-surprise',
+					],
 					'image' => [
 						'title' => __( 'Image', 'droit_portfolio' ),
 						'icon' => 'fa fa-image',
@@ -237,6 +269,16 @@ class DRTH_ESS_Pricing_Theme extends Widget_Base {
 				]
 		    ]
 	    );
+		$pricing_repeater->add_control(
+			'premium_pack_body_icon',
+			[
+				'label'     => __( 'Icon', 'droit-elementor-addons' ),
+				'type'      => \Elementor\Controls_Manager::ICONS,
+				'condition' => [
+					'premium_features_type' => 'icon'
+				]
+			]
+		);
 	    $pricing_repeater->add_control(
 		    'premium_features_img_icon', [
 			    'label' => esc_html__( 'Feature', 'droit_portfolio' ),
@@ -729,6 +771,60 @@ class DRTH_ESS_Pricing_Theme extends Widget_Base {
 				],
 			]
 		);
+
+		$this->add_control(
+			'p_icon_size',
+			[
+				'label' => __( 'Icon Size', 'droit-addons-pro' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px'],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 100,
+						'step' => 1,
+					],
+				],
+				'default' => [
+					'unit' => 'px',
+				],
+				'selectors' => [
+					'{{WRAPPER}} .dl_feature_list_table td .feature-content i' => 'font-size: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+		$this->add_control(
+			'p_icon_line',
+			[
+				'label' => __( 'Line', 'droit-addons-pro' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px'],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 100,
+						'step' => 1,
+					],
+				],
+				'default' => [
+					'unit' => 'px',
+				],
+				'selectors' => [
+					'{{WRAPPER}} .dl_feature_list_table td .feature-content i' => 'line-height: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+		$this->add_control(
+			'p_icon_color',
+			[
+				'label' => __( 'Icon Color', 'droit-addons-pro' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .dl_feature_list_table td .feature-content i' => 'color: {{VALUE}}',
+				],
+			]
+		);
+        
         $this->end_controls_section();
         
         
@@ -854,13 +950,31 @@ class DRTH_ESS_Pricing_Theme extends Widget_Base {
 												if( $pricing_data['features_type'] == 'image' ){
 													echo '<td class="default"><span class="feature-content">'. wp_get_attachment_image( $pricing_data['features_img_icon']['id'], 'full' ) .'</span></td>';
 												}
-												else {
+												elseif($pricing_data['features_type'] == 'icon' ){
+													?>
+													<td class="<?php echo esc_attr_e('elementor-repeater-item-'.$pricing_data['_id']);?>"><span class="feature-content">
+														<?php  
+															\Elementor\Icons_Manager::render_icon( $pricing_data['plan_icon']
+															)?>
+														</span></td>
+													<?php	 
+												}
+												else{
 													echo '<td class="default"><span class="feature-content">'. esc_html( $pricing_data['advance_plan_feature'], 'full' ) .'</span></td>';
 												}
 												
 												//Advance Plan ------------------------------------------------
 												if( $pricing_data['advance_features_type'] == 'image' ){
 													echo '<td><span class="feature-content">'. wp_get_attachment_image( $pricing_data['advance_features_img_icon']['id'], 'full' ) .'</span></td>';
+												}
+												elseif($pricing_data['advance_features_type'] == 'icon' ){
+													?>
+													<td class="<?php echo esc_attr_e('elementor-repeater-item-'.$pricing_data['_id']);?>"><span class="feature-content">
+														<?php  
+															\Elementor\Icons_Manager::render_icon( $pricing_data['advance_pack_body_icon']
+															)?>
+														</span></td>
+													<?php	 
 												}
 												else {
 													echo '<td><span class="feature-content">'. esc_html( $pricing_data['advance_plan_feature'] ) .'</span></td>';
@@ -869,6 +983,15 @@ class DRTH_ESS_Pricing_Theme extends Widget_Base {
 												//Premium Plan ------------------------------------------------
 												if( $pricing_data['premium_features_type'] == 'image' ){
 													echo '<td><span class="feature-content">'. wp_get_attachment_image( $pricing_data['premium_features_img_icon']['id'], 'full' ) .'</span></td>';
+												}
+												elseif($pricing_data['premium_features_type'] == 'icon' ){
+													?>
+													<td class="<?php echo esc_attr_e('elementor-repeater-item-'.$pricing_data['_id']);?>"><span class="feature-content">
+														<?php  
+															\Elementor\Icons_Manager::render_icon( $pricing_data['premium_pack_body_icon']
+															)?>
+														</span></td>
+													<?php	 
 												}
 												else {
 													echo '<td><span class="feature-content">'. esc_html( $pricing_data['premium_plan_feature'] ) .'</span></td>';

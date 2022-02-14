@@ -206,7 +206,7 @@
 .drdt-nav-menu__toggle{
     display: none;
 }
-@media (max-width: 768px){
+@media (max-width: 767px){
     .drdt_mobile_menu_logo_wrapper{
         display: flex;
         justify-content: space-between;
@@ -284,5 +284,6 @@
 .drdt-nav-menu__layout-horizontal.drbt_menu_active{
     right: 0;
 }
+
 
 /**=== Custom responsive Site navbar end ===**/

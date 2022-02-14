@@ -14,6 +14,7 @@
  *
  * @see WP_Widget
  */
+add_image_size( 'carspa_120x80', 120, 80, true); // Screenshot carousel style 6
 class Carspa_WP_Widget_Recent_Post extends WP_Widget {
 
     /**
@@ -28,7 +29,7 @@ class Carspa_WP_Widget_Recent_Post extends WP_Widget {
             'customize_selective_refresh' => true,
             'show_instance_in_rest'       => true,
         );
-        parent::__construct( 'rave_recent_posts', __( 'Recent Posts (Rave)' ), $widget_ops );
+        parent::__construct( 'rave_recent_posts', __( 'Recent Posts (Carspa)' ), $widget_ops );
         $this->alt_option_name = 'widget_recent_entries';
     }
 
@@ -110,7 +111,7 @@ class Carspa_WP_Widget_Recent_Post extends WP_Widget {
         <ul>
             <?php foreach ( $r->posts as $recent_post ) : ?>
                 <?php
-                $post_title   = get_the_title( $recent_post->ID );
+                $post_title   = wp_trim_words(get_the_title( $recent_post->ID ), 4, '');
                 $title        = ( ! empty( $post_title ) ) ? $post_title : __( '(no title)' );
                 $aria_current = '';
 
@@ -119,12 +120,24 @@ class Carspa_WP_Widget_Recent_Post extends WP_Widget {
                 }
                 ?>
                 <li>
-                    <a href="<?php the_permalink( $recent_post->ID ); ?>"<?php echo $aria_current; ?>>
-                        <?php echo wp_trim_words( get_the_title(), 2, '' ); ?>
-                    </a>
-                    <?php if ( $show_date ) : ?>
-                        <span class="post-date"><?php echo get_the_date( '', $recent_post->ID ); ?></span>
-                    <?php endif; ?>
+                    <div class="d-flex">
+                        <a href="<?php the_permalink( $recent_post->ID ); ?>">
+                            <?php
+                            if ( has_post_thumbnail($recent_post->ID) ) {
+                                echo get_the_post_thumbnail( $recent_post->ID, 'carspa_120x80', array( 'class' => 'media-object' ) );
+                            }
+                            ?>
+                        </a>
+                        <div class="post_text">
+                            <a href="<?php the_permalink( $recent_post->ID ); ?>" title="<?php echo esc_attr($title); ?>">
+                                <h3><?php echo esc_html($title) ?></h3>
+                            </a>
+                        
+                            <?php if ( $show_date ) : ?>
+                                <span class="post-date"><?php echo get_the_date( '', $recent_post->ID ); ?></span>
+                            <?php endif; ?>
+                        </div>
+                    </div>
                 </li>
             <?php endforeach; ?>
         </ul>

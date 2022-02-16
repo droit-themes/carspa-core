@@ -195,6 +195,18 @@ class DRTH_ESS_nav extends Widget_Base {
         ]
     );
 
+    $this->add_control(
+        'mobile_logo_sticky',
+        [
+            'label' => __( 'Mobile Ratina Logo', 'carspa-core' ),
+            'type' => \Elementor\Controls_Manager::MEDIA,
+            'default' => [
+                'url' => '',
+            ]
+
+        ]
+    );
+
     $this->add_responsive_control(
         'mobile_logo_max_width',
         [
@@ -1240,7 +1252,13 @@ class DRTH_ESS_nav extends Widget_Base {
         </div>
         <?php
     } else {
-       
+
+        $allow_html = array(
+            'img' => array(
+                'srcset' => array()
+            )
+        );
+        $retina_logo = !empty($settings['mobile_logo_sticky']['url']) ? "srcset='{$settings['mobile_logo_sticky']['url']} 2x'" : '';
     ?>
     <div <?php echo $this->get_render_attribute_string( 'drdt-main-menu' ); ?>>
     <div class="offcanvus_menu_overlay"></div>
@@ -1259,7 +1277,9 @@ class DRTH_ESS_nav extends Widget_Base {
         </div>
         <nav <?php echo $this->get_render_attribute_string( 'drdt-nav-menu' ); ?>>
             <div class="drdt_mobile_menu_logo_wrapper">
-                <div class="mobile-logo"><?php if( isset($mobile_logo['url']) && !empty($mobile_logo['url']) ){?><img src="<?php echo esc_url($mobile_logo['url']);?>" alt="<?php echo esc_html('Logo', 'droithead');?>"><?php }?></div>
+                <div class="mobile-logo"><?php if( isset($mobile_logo['url']) && !empty($mobile_logo['url']) ){?>
+                    <img src="<?php echo esc_url($mobile_logo['url']);?>"  <?php echo wp_kses( $retina_logo, $allow_html ); ?>  alt="<?php echo esc_html('Logo', 'droithead');?>"><?php }?>
+                </div>
               <div class="elementor-clickable drdt-flyout-close" tabindex="0">
                 <?php 
                 Icons_Manager::render_icon(

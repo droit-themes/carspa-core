@@ -485,9 +485,7 @@ class DRTH_ESS_Booking_Form extends Widget_Base {
             <div class="booking-form-content">
                  <a class="close-booking-form" href="">X</a>
                  <h4 class="modal-title-main"><?php echo carspa_return($settings['booking_form_title']); ?></h4>
-                 <div class="book-description">
-                   <?php echo carspa_return($settings['booking_form_description']); ?>
-                 </div>  
+    
                <?php echo do_shortcode('[contact-form-7 id="'.$settings['get_contact_form'].'" title="Contact form 1"]'); ?>
             </div>
         </div>

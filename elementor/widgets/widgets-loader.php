@@ -87,6 +87,13 @@ class Widgets_Loader{
                 'source' => 'local',
             ],
 
+            'pricing-pro' => [
+                'title' => __( 'Pricing Pro', 'carspa-core' ),
+                'js' => [''],
+                'css' => [''],
+                'source' => 'addons',
+            ],
+
             'nav' => [
                 'title' => __( 'carspa Nav', 'carspa-core' ),
                 'js' => [''],

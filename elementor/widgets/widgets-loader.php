@@ -111,6 +111,12 @@ class Widgets_Loader{
                 'css' => [''],
                 'source' => 'addons',
             ],
+            'booking-form' => [
+                'title' => __( 'Booking Form', 'carspa-core' ),
+                'js' => ['js/booking.js'],
+                'css' => ['css/booking.css'],
+                'source' => 'local',
+            ],
 
 
         ]);

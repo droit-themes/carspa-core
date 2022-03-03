@@ -62,16 +62,7 @@ class DRTH_ESS_Booking_Form extends Widget_Base {
 				'placeholder' => esc_html__( 'Schedule Auto Service', 'carspa-core' ),
 			]
 		);
-        $this->add_control(
-			'booking_form_description',
-			[
-				'label' => esc_html__( 'Description', 'carspa-core' ),
-				'type' => \Elementor\Controls_Manager::TEXTAREA,
-				'rows' => 10,
-				'default' => esc_html__( 'To schedule an appointment give us a call at 1-800-123-4567 or fill out the form below with your information and requested services.                ', 'carspa-core' ),
-				'placeholder' => esc_html__( 'Type your description here', 'carspa-core' ),
-			]
-		);
+
 
         $this->add_control(
 			'get_contact_form',
@@ -102,15 +93,21 @@ class DRTH_ESS_Booking_Form extends Widget_Base {
 				],
 			]
 		);
-        $this->add_responsive_control(
-			'section_content_content',
+		$this->add_control(
+			'section_content_title_color',
 			[
-				'label' => esc_html__( 'Content Margin', 'carspa-core' ),
-				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'size_units' => [ 'px', '%', 'em' ],
+				'label' => esc_html__( 'Title Color', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .book-description' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .modal-title-main' => 'color: {{VALUE}}',
 				],
+			]
+		);
+		$this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[
+				'name' => 'section_content_title_typography',
+				'selector' => '{{WRAPPER}} .modal-title-main',
 			]
 		);
 
@@ -484,8 +481,7 @@ class DRTH_ESS_Booking_Form extends Widget_Base {
         <div class="display-booking-form">
             <div class="booking-form-content">
                  <a class="close-booking-form" href="">X</a>
-                 <h4 class="modal-title-main"><?php echo carspa_return($settings['booking_form_title']); ?></h4>
-    
+                 <h4 class="modal-title-main text-center"><?php echo carspa_return($settings['booking_form_title']); ?></h4>
                <?php echo do_shortcode('[contact-form-7 id="'.$settings['get_contact_form'].'" title="Contact form 1"]'); ?>
             </div>
         </div>
@@ -559,5 +555,5 @@ class DRTH_ESS_Booking_Form extends Widget_Base {
 	}
 
 }
-?>
+
 

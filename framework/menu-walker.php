@@ -65,7 +65,7 @@ class Menu_Walker extends \Walker_Nav_Menu{
 		}
 		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
 		if ( $args->has_children ) {
-			$item_output .= "<span class='ti-angle-down mobile_dropdown_icon drdt-menu-toggle sub-arrow drdt-menu-child-";
+			$item_output .= "<span class='mobile_dropdown_icon drdt-menu-toggle sub-arrow drdt-menu-child-";
 			$item_output .= $depth;
 			$item_output .= "'></span>";
 		}

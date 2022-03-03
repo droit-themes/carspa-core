@@ -99,11 +99,10 @@ class DRTH_ESS_nav extends Widget_Base {
                 'type'         => Controls_Manager::SELECT,
                 'default'      => 'arrow',
                 'options'      => [
-                    'arrow'   => __( 'Arrows', 'carspa-core' ),
-                    'plus'    => __( 'Plus Sign', 'carspa-core' ),
-                    'classic' => __( 'Classic', 'carspa-core' ),
+                    'ti-angle-down'   => __( 'Arrows', 'carspa-core' ),
+                    'ti-plus'    => __( 'Plus Sign', 'carspa-core' ),
+                    'none' => __( 'None', 'carspa-core' ),
                 ],
-                'prefix_class' => 'drdt-submenu-icon-',
             ]
         );
 
@@ -1205,7 +1204,13 @@ class DRTH_ESS_nav extends Widget_Base {
         'class',
         [
             'drdt-nav-menu__layout-' . $drdt_layout,
-            'drdt-nav-menu__submenu-' . $submenu_icon,
+        ]
+    );
+    $this->add_render_attribute(
+        'drdt-nav-menu',
+        'data-icon',
+        [
+            $submenu_icon,
         ]
     );
 

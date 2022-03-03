@@ -37,6 +37,7 @@
                 "droit-adavnced-slider.default": drthWidgets._dl_pro_advance_slider,
                 "droit-video_popup.default": drthWidgets._video_popup,
                 "drth-filter-gallery.default": drthWidgets._dl_pro_filter_gallery,
+                "droit-nav-theme.default": drthWidgets._theme_nav_menu,
             };
            
             $.each(widgetsMap, function (name, callback) {
@@ -547,7 +548,16 @@
 
             }
             
-        } 
+        },
+        _theme_nav_menu:function ($scope) {
+           let menu = $scope.find('.drdt-nav-menu nav');
+           let menuItem = $scope.find('.drdt-nav-menu nav li.menu-item-has-children');
+            let iconClass = menu.data('icon');
+            menuItem.each(function(){
+                $(this).find('.sub-arrow').addClass(iconClass);
+            });
+            console.log(iconClass);
+        }
     };
    function _dl_pro_count_down_redirect(url) {
         window.location.replace(url);

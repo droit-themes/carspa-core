@@ -102,13 +102,6 @@
     content: "\e622";
 }
 
-@media (min-width: 768px) {
-    .drdt-nav-menu__layout-horizontal .drdt_navmenu .drdt-menu-item .mobile_dropdown_icon  {
-        display: none;
-    }
-}
-
-
 @media (min-width: 768px){
     .drdt_navmenu .menu-item:hover > .sub-menu {
         opacity: 1 !important;

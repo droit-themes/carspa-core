@@ -1,0 +1,167 @@
+.droit-icon-list-items{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.droit-icon-list-item {
+    position: relative;
+}
+.droit_pricing_pro_wrapper{
+    position: relative;
+}
+.droit-icon-list-item:not(:last-child){
+    position: relative;
+}
+.droit-icon-list-item:not(:last-child):after{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+.dl_btn.btn_1.dl_pricing_btn{
+    display: inline-block;
+}
+.droit_pricing_pro_wrapper,
+.dl_pro_pricing_sub_title,
+.dl_pro_pricing_title,
+.droit-icon-list-item i,
+.droit_pricing_feature_list,
+.dl_pricing_note,
+.dl_pro_badge{
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.droit_pricing_pro_wrapper {
+    text-align: center;
+    padding: 50px;
+    border-radius: 20px 20px 20px 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0 10px 30px rgb(17 17 17 / 11%);
+}
+.droit_pricing_pro_wrapper .dl_pro_badge{
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: #0161FF;
+    color: #FFFFFF;
+    padding: 5px 15px 5px 15px;
+    border-radius: 0px 10px 10px 10px;
+}
+.droit_pricing_pro_wrapper .droit_pro_price.droit_pro_price {
+    margin-bottom: 34px;
+}
+.droit_pricing_pro_wrapper .droit_pro_price.droit_pro_price{
+    font-size: 40px;
+}
+.droit_pricing_pro_wrapper .droit-regular-price{
+    text-decoration: line-through;
+    font-size: 20px;
+}
+.droit_pricing_pro_wrapper .droit_pro_price.droit_pro_price.dl_below .droit-price-period{
+    display: block;
+    width: 100%;
+}
+.droit_pricing_pro_wrapper .dl_pro_pricing_title {
+    font-size: 23px;
+    font-weight: 700;
+    color: #222222;
+    margin-bottom: 5px;
+}
+.droit_pricing_pro_wrapper .dl_pro_pricing_sub_title {
+    font-size: 14px;
+    font-weight: 400;
+    color: #999999;
+    margin-bottom: 53px;
+}
+.droit_pro_price.droit_pro_price, .dl_currancy.droit_currency_symbol {
+    font-size: 55px;
+    font-weight: 700;
+    color: #0161FF;
+}
+.droit_pricing_pro_wrapper .droit_pro_price.droit_pro_price {
+    margin-bottom: 34px;
+}
+.droit_pricing_pro_wrapper .dl_currancy.droit_currency_symbol {
+    font-size: 14px;
+    top: -29px;
+}
+.droit_pricing_pro_wrapper span.droit_price_duration.droit-price-period {
+    font-size: 15px;
+    font-weight: 500;
+}
+.droit_pricing_pro_wrapper .droit-icon-list-item {
+    padding-bottom: 9px;
+    margin-top: 9px;
+    color: #999999;
+}
+
+.droit_pricing_pro_wrapper .droit-icon-list-item i {
+    color: #0161FF;
+    font-size: 14px;
+}
+.droit_pricing_pro_wrapper .dl_pricing_btn {
+    font-size: 15px;
+    font-weight: 700;
+    padding: 16px 55px 16px 55px;
+    border-radius: 50px 50px 50px 50px;
+    margin-bottom: 10px;
+    background-color: #0161FF;
+    color: #FFFFFF;
+}
+.droit_pricing_pro_wrapper .dl_pricing_btn:hover {
+    background-color: #2D74EA;
+}
+.dl-tooltip{
+    cursor: pointer;
+}
+.dl-tooltip[data-tooltip] {
+    position: relative;
+    display: inline-block;
+  }
+  
+.dl-tooltip[data-tooltip]:before, .dl-tooltip[data-tooltip]:after {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 99;
+}
+  
+.dl-tooltip[data-tooltip]:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #323232;
+    transform: rotate(45deg);
+    transition: opacity 0.5s;
+}
+  
+.dl-tooltip[data-tooltip]:after {
+    height: auto;
+    padding: 8px;
+    font-size: 13px;
+    line-height: 11px;
+    content: attr(data-tooltip);
+    white-space: nowrap;
+}
+  
+.dl-tooltip[data-tooltip]:before {
+    bottom: 100%;
+    margin-bottom: -4px;
+}
+  
+.dl-tooltip[data-tooltip]:after {
+    background-color: #323232;
+    color: #ecf0f1;
+    transition: opacity 0.3s;
+    left: 50%;
+    bottom: 100%;
+    margin-left: -20px;
+    transform: translateX(-50%);
+}
+
+.dl-tooltip[data-tooltip]:hover:before, .dl-tooltip[data-tooltip]:hover:after, .dl-tooltip[data-tooltip]:focus:before, .dl-tooltip[data-tooltip]:focus:after {
+    visibility: visible;
+    opacity: 1;
+}

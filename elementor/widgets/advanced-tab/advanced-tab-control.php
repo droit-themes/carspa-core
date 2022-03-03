@@ -617,6 +617,7 @@ abstract class Advanced_Tab_Control extends Widget_Base
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .droit-advance-navs .droit-tab-nav-items:hover .droit_tab_icon_inner' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .droit-advance-navs .droit-tab-nav-items:hover .droit_tab_icon_inner svg path' => 'fill: {{VALUE}}',
                 ],
             ]
         );
@@ -659,6 +660,7 @@ abstract class Advanced_Tab_Control extends Widget_Base
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .droit-advance-navs .droit-tab-nav-items.dl_active .droit_tab_icon_inner' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .droit-advance-navs .droit-tab-nav-items:hover .droit_tab_icon_inner svg path' => 'fill: {{VALUE}}',
                 ],
             ]
         );

@@ -57,7 +57,7 @@ class DRTH_ESS_searchbar extends Widget_Base {
         'search_icon',
         [
             'label' => __( 'Icon', 'text-domain' ),
-            'type' => \Elementor\Controls_Manager::ICONS,
+            'type'  => Controls_Manager::ICONS,
             'default' => [
                 'value' => 'fas fa-search',
                 'library' => 'solid',
@@ -138,7 +138,8 @@ class DRTH_ESS_searchbar extends Widget_Base {
             'label' => __( 'Icon Color', 'carspa-core' ),
             'type' => Controls_Manager::COLOR,
             'selectors' => [
-                '{{WRAPPER}} .nav-link i:before' => 'color: {{VALUE}} !important;',
+                '{{WRAPPER}} .nav-link i:before,{{WRAPPER}} .search-btn svg path' => 'color: {{VALUE}};',
+				'{{WRAPPER}} .search-btn svg path' => 'fill: {{VALUE}};',
             ],
         ]
     );
@@ -358,13 +359,23 @@ class DRTH_ESS_searchbar extends Widget_Base {
     // HTML Render Function --------------------------------
     protected function render() {
     $settings = $this->get_settings(); 
+	$icon_type = isset($settings['search_icon']) ? $settings['search_icon'] : '';
     ?>
     <ul class="navbar-nav search_cart carspa">
-        <li class="nav-item search"><a class="nav-link search-btn" href="javascript:void(0);"><i
-                    class="icon-search"></i></a>
+        <li class="nav-item search"><a class="nav-link search-btn" href="javascript:void(0);">
+				<?php 
+					Icons_Manager::render_icon(
+						$icon_type,
+						[
+							'aria-hidden' => 'true',
+							'tabindex'    => '0',
+						]
+					);
+                ?>
+			</a>
             <form action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get" class="menu-search-form">
                 <div class="input-group">
-                    <input type="search" class="form-control" placeholder="<?php echo esc_attr_e( 'Search...', 'carspa' ) ?>" id="" value="<?php echo get_search_query(); ?>" name="s">
+                    <input type="search" class="form-control" placeholder="<?php echo esc_attr_e( 'Search...', 'carspa' ) ?>"  value="<?php echo get_search_query(); ?>" name="s">
                     <button type="submit"><i class="ti-arrow-right"></i></button>
                 </div>
             </form>

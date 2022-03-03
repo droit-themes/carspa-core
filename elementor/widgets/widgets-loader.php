@@ -59,6 +59,17 @@ class Widgets_Loader{
                 'source' => 'addons',
             ],
 
+            'banner-slider' => [
+                'title' => __( 'Banner Slider', 'carspa-core' ),
+                'js' => [''],
+                'css' => [''],
+                'vendor' => [
+                    'css' => ['swiper'],
+                    'js'  => ['swiper']
+                ],
+                'source' => 'local',
+            ],
+
             'pricing-pro' => [
                 'title' => __( 'Pricing Pro', 'carspa-core' ),
                 'js' => [''],

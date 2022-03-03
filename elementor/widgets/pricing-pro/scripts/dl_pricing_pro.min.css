@@ -12,6 +12,7 @@
     margin-right: 9px;
     margin-top: 3px;
 }
+
 .droit_pricing_pro_wrapper{
     position: relative;
 }
@@ -109,6 +110,7 @@
     text-align: left;
     display: flex;
     flex-wrap: wrap;
+
 }
 
 .droit_pricing_pro_wrapper .droit-icon-list-item i {

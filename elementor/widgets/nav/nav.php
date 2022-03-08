@@ -602,6 +602,49 @@ class DRTH_ESS_nav extends Widget_Base {
                 'tab'   => Controls_Manager::TAB_STYLE,
             ]
         );
+
+        $this->add_control(
+            'submenu_item_icon_style_settings',
+            [
+                'label' => __( 'Submenu Icon Style', 'carspa-core' ),
+                'type' => \Elementor\Controls_Manager::HEADING,
+                'separator' => 'before',
+            ]
+        );
+
+        $this->add_responsive_control(
+            'submenu_item_icon_margin',
+            [
+                'label' => __( 'Icon Margin', 'carspa-core' ),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => [ 'px', '%', 'em' ],
+                'selectors' => [
+                    '{{WRAPPER}} span.mobile_dropdown_icon.drdt-menu-toggle.sub-arrow.drdt-menu-child-0.ti-angle-down' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} span.mobile_dropdown_icon.drdt-menu-toggle.sub-arrow.drdt-menu-child-0.ti-plus' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ]
+            ]
+        );
+        $this->add_control(
+            'submenu_item_icon_color',
+            [
+                'label' => __( 'Icon Color', 'carspa-core' ),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} span.mobile_dropdown_icon.drdt-menu-toggle.sub-arrow.drdt-menu-child-0.ti-angle-down' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} span.mobile_dropdown_icon.drdt-menu-toggle.sub-arrow.drdt-menu-child-0.ti-plus' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_group_control(
+            Group_Control_Typography::get_type(), [
+                'name' => 'submenu_item_icon_typography',
+                'selector' => '
+                    {{WRAPPER}} span.mobile_dropdown_icon.drdt-menu-toggle.sub-arrow.drdt-menu-child-0.ti-angle-down:before, span.mobile_dropdown_icon.drdt-menu-toggle.sub-arrow.drdt-menu-child-0.ti-plus:before
+                ',
+            ]
+        );
+
+
         $this->add_control(
             'submenu_item_style_settings',
             [

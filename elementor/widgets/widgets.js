@@ -40,6 +40,7 @@
 				'droit-video_popup.default': drthWidgets._video_popup,
 				'drth-filter-gallery.default': drthWidgets._dl_pro_filter_gallery,
 				'droit-banner-slider.default': drthWidgets._dl_pro_banner_slider,
+				'droit-nav-theme.default': drthWidgets._nav_menu,
 			};
 
 			$.each(widgetsMap, function (name, callback) {
@@ -628,6 +629,11 @@
 				}
 			}
 		},
+		_nav_menu: function( $scope ) {
+            let icon_class = $scope.find('.drdt-nav-menu__layout-horizontal').data('icon');
+			$scope.find('.sub-arrow ').addClass(icon_class);
+			
+		}
 	};
 	function _dl_pro_count_down_redirect(url) {
 		window.location.replace(url);

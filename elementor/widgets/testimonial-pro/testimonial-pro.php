@@ -7,7 +7,6 @@ use \Elementor\Utils;
 use \Elementor\Group_Control_Background;
 use \Elementor\Group_Control_Border;
 use \Elementor\Group_Control_Box_Shadow;
-use \Elementor\Scheme_Typography;
 use \ELEMENTOR\Group_Control_Typography;
 use \DROIT_ELEMENTOR_PRO\Content_Typography;
 use \DROIT_ELEMENTOR_PRO\Position;

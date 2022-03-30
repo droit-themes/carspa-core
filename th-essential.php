@@ -7,7 +7,7 @@
 Plugin Name: Carspa Core
 Plugin URI: https://droitthemes.com/droit-elementor-addons/
 Description: Droit Elementor Addons is a bundle of super useful widgets. This Elementor compatible plugin is easy to use and you can customize different features as you like. Just plug and play.
-Version: 1.0.0
+Version: 1.0.2
 Author: DroitThemes
 Author URI: https://droitthemes.com/
 License: GPLv3

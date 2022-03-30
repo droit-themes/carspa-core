@@ -12,7 +12,6 @@ use \Elementor\Group_Control_Background;
 use \Elementor\Group_Control_Border;
 use \Elementor\Group_Control_Box_Shadow;
 use \Elementor\Group_Control_Image_Size;
-use \Elementor\Scheme_Typography;
 use \Elementor\Widget_Base;
 use WP_Query;
 
@@ -141,7 +140,6 @@ class DRTH_ESS_Services extends Widget_Base{
             Group_Control_Typography::get_type(), [
                 'label' => 'Title Typography',
                 'name' => 'feature_typography_title',
-                'scheme' => Scheme_Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .single-col-min h3',
                 
             ]
@@ -161,7 +159,6 @@ class DRTH_ESS_Services extends Widget_Base{
             Group_Control_Typography::get_type(), [
                 'label' => 'Content Typography',
                 'name' => 'feature_typography_content',
-                'scheme' => Scheme_Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .single-col-min p',
                 
             ]
@@ -181,7 +178,6 @@ class DRTH_ESS_Services extends Widget_Base{
             Group_Control_Typography::get_type(), [
                 'label' => 'Button Typography',
                 'name' => 'feature_typography_button',
-                'scheme' => Scheme_Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .single-col-min a.btn',
                 
             ]
@@ -210,7 +206,6 @@ class DRTH_ESS_Services extends Widget_Base{
         Group_Control_Typography::get_type(), [
             'label' => 'Title Typography',
             'name' => 'typography_title',
-            'scheme' => Scheme_Typography::TYPOGRAPHY_1,
             'selector' => '{{WRAPPER}} .sub-content-2 h4',
             
         ]
@@ -230,7 +225,6 @@ class DRTH_ESS_Services extends Widget_Base{
         Group_Control_Typography::get_type(), [
             'label' => 'Content Typography',
             'name' => 'typography_content',
-            'scheme' => Scheme_Typography::TYPOGRAPHY_1,
             'selector' => '{{WRAPPER}} .sub-content-2 p',
             
         ]
@@ -250,7 +244,6 @@ class DRTH_ESS_Services extends Widget_Base{
         Group_Control_Typography::get_type(), [
             'label' => 'Button Typography',
             'name' => 'typography_content',
-            'scheme' => Scheme_Typography::TYPOGRAPHY_1,
             'selector' => '{{WRAPPER}} .sub-content-2 a.btn',
             
         ]

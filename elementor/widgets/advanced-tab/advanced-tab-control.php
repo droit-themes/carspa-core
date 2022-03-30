@@ -19,7 +19,6 @@ use \Elementor\Utils;
 use \Elementor\Group_Control_Background;
 use \Elementor\Group_Control_Border;
 use \Elementor\Group_Control_Box_Shadow;
-use \Elementor\Scheme_Typography;
 
 if (!defined('ABSPATH')) {exit;}
 

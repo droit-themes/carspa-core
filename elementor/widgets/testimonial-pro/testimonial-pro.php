@@ -52,7 +52,7 @@ class Droit_Addons_Testimonial_Pro extends Widget_Base{
         return [ 'testimonial','testimonial pro','dl testimonial slider'];
     }
 
-    protected function _register_controls()
+    protected function register_controls()
     {
         do_action('dl_widgets/test/register_control/start', $this);
 

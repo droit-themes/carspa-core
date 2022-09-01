@@ -43,7 +43,7 @@ class Droit_Addons_Mini_Cart extends \Elementor\Widget_Base {
         ];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
         do_action('dl_widgets/mini-cart/register_control/start', $this);
 
         if( class_exists('\Woocommerce') ){

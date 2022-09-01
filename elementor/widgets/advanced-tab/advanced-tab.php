@@ -40,7 +40,7 @@ class Droit_Addons_Advanced_Tab extends Control
         return Module::get_keywords();
     }
 
-    protected function _register_controls()
+    protected function register_controls()
     {
         $this->_dl_pro_tabs_preset_controls();
         $this->_dl_pro_tabs_content__controls();

@@ -44,7 +44,7 @@ class DRTH_ESS_Services extends Widget_Base{
         return [ 'test', ];
     }
 
-    protected function _register_controls()
+    protected function register_controls()
     {
         do_action('dl_widgets/test/register_control/start', $this);
 
@@ -243,7 +243,7 @@ class DRTH_ESS_Services extends Widget_Base{
     $this->add_group_control(
         Group_Control_Typography::get_type(), [
             'label' => 'Button Typography',
-            'name' => 'typography_content',
+            'name' => 'typography_button',
             'selector' => '{{WRAPPER}} .sub-content-2 a.btn',
             
         ]

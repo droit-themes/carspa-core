@@ -41,7 +41,7 @@ class Lottie{
 
 	public function init() {	
 		add_action( 'wp_enqueue_scripts', [ $this, '_script' ] );
-		add_action( 'elementor/element/section/section_layout/after_section_end', [ $this, 'dl_register_controls' ], 10 );
+		add_action( 'elementor/element/section/section_layout/after_section_end', [ $this, 'dlregister_controls' ], 10 );
 		add_action( 'elementor/section/print_template', [ $this, 'dl_print_template' ], 10, 2 );
 		add_action( 'elementor/frontend/section/before_render', [ $this, 'dl_before_render' ], 10, 1 );
 	}
@@ -113,7 +113,7 @@ class Lottie{
 			);
 		}	
 	}
-	public function dl_register_controls( $element ) {
+	public function dlregister_controls( $element ) {
 
 		$element->start_controls_section(
 			'section_droit_pro_lottie',

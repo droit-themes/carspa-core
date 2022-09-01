@@ -40,7 +40,7 @@ class Droit_Addons_Image_Compare extends Control
         return Module::get_keywords();
     }
 
-    protected function _register_controls()
+    protected function register_controls()
     {
         $this->_dl_pro_image_compare_preset_controls();
         $this->_dl_pro_image_compare_content_controls();

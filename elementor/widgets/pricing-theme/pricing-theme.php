@@ -41,7 +41,7 @@ class DRTH_ESS_Pricing_Theme extends Widget_Base {
 	}
 
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
 
 	    $pricing_repeater = new \Elementor\Repeater();

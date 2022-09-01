@@ -37,7 +37,7 @@ class Droit_Addons_Animated_Image extends Widget_Base{
         return [ 'animation','amimated','animation-images','image' ];
     }
 
-    protected function _register_controls()
+    protected function register_controls()
     {
         do_action('dl_widgets/animated-image/register_control/start', $this);
 

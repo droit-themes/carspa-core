@@ -30,7 +30,7 @@ class Droit_Addons_Banner_Slider extends \Elementor\Widget_Base{
         return [ 'Slider' ];
     }
 
-    protected function _register_controls()
+    protected function register_controls()
     {
         do_action('dl_widgets/test/register_control/start', $this);
 

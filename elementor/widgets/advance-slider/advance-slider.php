@@ -44,7 +44,7 @@ class Droit_Addons_Advance_Slider extends \ELEMENTOR\Widget_Base
         return Module::get_keywords();
     }
 
-    protected function _register_controls()
+    protected function register_controls()
     {
         do_action('dl_widgets/adslider/register_control/start', $this);
 

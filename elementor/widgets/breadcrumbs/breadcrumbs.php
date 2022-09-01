@@ -40,7 +40,7 @@ class Droit_Addons_Breadcrumbs extends Control
         return Module::get_keywords();
     }
 
-    protected function _register_controls()
+    protected function register_controls()
     {
         
         $this->_dl_pro_breadcrumbs_preset_controls();

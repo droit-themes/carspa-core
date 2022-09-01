@@ -45,7 +45,7 @@ class Parallax{
          
 		add_action('wp_enqueue_scripts', [$this, 'register_frontend_scripts']);
 		add_action('elementor/frontend/before_enqueue_scripts', [$this, 'editor_scripts'], 99);
-		add_action( 'elementor/element/section/section_layout/after_section_end', [$this, '_register_controls' ], 10 );
+		add_action( 'elementor/element/section/section_layout/after_section_end', [$this, 'register_controls' ], 10 );
         add_action( 'elementor/frontend/section/before_render', [ $this, 'dl_before_render' ], 10, 1 );
 
         add_action( 'elementor/section/print_template', [ $this, 'dl_print_template' ], 10, 2 );
@@ -63,7 +63,7 @@ class Parallax{
 		wp_enqueue_script( 'dladdons-parallax-section-init', self::url() . 'assets/js/scripts.js', array( 'jquery', 'elementor-frontend' ), self::version(), true );
 	}
 
-	public function _register_controls($control)
+	public function register_controls($control)
     {
         $id = $control->get_id();
         if ( 'section' === $control->get_name() ) {

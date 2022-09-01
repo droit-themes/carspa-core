@@ -61,7 +61,7 @@ class Droit_Addons_Pricing_Pro extends \Elementor\Widget_Base{
         return isset( $symbols[ $symbol_name ] ) ? $symbols[ $symbol_name ] : '';
     }
 
-    protected function _register_controls()
+    protected function register_controls()
     {
         do_action('dl_widgets/pricing_pro/register_control/start', $this);
 

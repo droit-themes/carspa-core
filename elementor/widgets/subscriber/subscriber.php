@@ -40,7 +40,7 @@ class Droit_Addons_Subscriber extends Control
         return Module::get_keywords();
     }
 
-    protected function _register_controls()
+    protected function register_controls()
     {
         do_action('dl_widgets/subscriber/register_control/start', $this);
 

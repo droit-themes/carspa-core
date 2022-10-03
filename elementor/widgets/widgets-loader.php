@@ -148,6 +148,12 @@ class Widgets_Loader{
                 'css' => ['css/booking.css'],
                 'source' => 'local',
             ],
+            'single-button' => [
+                'title' => __( 'Carspa Button', 'carspa-core' ),
+                'js' => [''],
+                'css' => ['dl_single_button.min.css'],
+                'source' => 'local',
+            ],
 
 
         ]);

@@ -142,18 +142,29 @@ class Widgets_Loader{
                 'css' => [''],
                 'source' => 'addons',
             ],
+
             'booking-form' => [
                 'title' => __( 'Booking Form', 'carspa-core' ),
                 'js' => ['js/booking.js'],
                 'css' => ['css/booking.css'],
                 'source' => 'local',
             ],
+
             'single-button' => [
                 'title' => __( 'Carspa Button', 'carspa-core' ),
                 'js' => [''],
                 'css' => ['dl_single_button.min.css'],
                 'source' => 'local',
             ],
+
+            'testimonial-two' => [
+	            'title' => __( 'Carspa Testimonial', 'carspa-coro' ),
+	            'js' => ['testimonial-two.js'],
+	            'css' => ['testimonial-two.css'],
+	            'source' => 'local',
+            ],
+
+
 
 
         ]);

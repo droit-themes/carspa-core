@@ -23,6 +23,7 @@
 				'droit-adavnced-slider.default': '_dl_pro_advance_slider',
 				'droit-video_popup.default': '_video_popup',
 				'droit-banner-slider.default': '_dl_pro_banner_slider',
+				'droit-service-slider.default': '_dl_pro_advance_slider',
 			};
 
 			var widgetsMap = {
@@ -40,6 +41,7 @@
 				'droit-video_popup.default': drthWidgets._video_popup,
 				'drth-filter-gallery.default': drthWidgets._dl_pro_filter_gallery,
 				'droit-banner-slider.default': drthWidgets._dl_pro_banner_slider,
+				'droit-service-slider.default': drthWidgets._dl_pro_advance_slider,
 				'droit-nav-theme.default': drthWidgets._nav_menu,
 			};
 
@@ -512,7 +514,7 @@
 		},
 		_dl_pro_advance_slider: function ($scope) {
 			var $slider = $scope.find(
-					'.dl_advance_slider, .dl_pro_testimonial_slider'
+					'.dl_advance_slider, .dl_pro_testimonial_slider,.dl_pro_services_slider'
 				),
 				$item = $scope.find('.swiper-slide'),
 				$dat = $slider.data('settings');

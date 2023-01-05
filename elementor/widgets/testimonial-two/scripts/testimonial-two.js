@@ -3,12 +3,12 @@
 jQuery(function ($) {
   "use strict";
 
-  var slider = new Swiper(".swiper-container.gallery-slider", {
+  var slider = new Swiper(".swiper-container.feedback-slider", {
     speed: 2500,
     slidesPerView: 1,
-    centeredSlides: true,
+    centeredSlides: false,
     loop: true,
-    loopedSlides: 3,
+    spaceBetween: 30,
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
@@ -23,13 +23,13 @@ jQuery(function ($) {
     },
   });
 
-  var thumbs = new Swiper(".swiper-container.gallery-thumbs", {
-    slidesPerView: 3,
-    spaceBetween: 10,
-    centeredSlides: true,
-    loop: true,
-    slideToClickedSlide: true,
-  });
-  slider.controller.control = thumbs;
-  thumbs.controller.control = slider;
+  // var thumbs = new Swiper(".swiper-container.gallery-thumbs", {
+  //   slidesPerView: 3,
+  //   spaceBetween: 10,
+  //   centeredSlides: true,
+  //   loop: true,
+  //   slideToClickedSlide: true,
+  // });
+  // slider.controller.control = thumbs;
+  // thumbs.controller.control = slider;
 });

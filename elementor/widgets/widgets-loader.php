@@ -163,7 +163,12 @@ class Widgets_Loader{
 	            'css' => ['testimonial-two.css'],
 	            'source' => 'local',
             ],
-
+            'service-slider' => [
+	            'title' => __( 'Carspa Service Slider', 'carspa-coro' ),
+	            'js' => [''],
+	            'css' => ['service_slider.min.css'],
+	            'source' => 'local',
+            ],
 
 
 

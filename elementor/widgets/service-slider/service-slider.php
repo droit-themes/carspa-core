@@ -1524,7 +1524,7 @@ class Droit_Addons_Service_Slider extends Widget_Base{
                             </a>
                             <div class="service_slider_content">
                                 <a href="<?php echo esc_url( get_the_permalink()); ?>"><h3><?php the_title();?></h3></a>
-                                <p><?php echo wp_trim_words(get_the_content(), '13'); ?></p>
+                                <?php the_excerpt(); ?>
                                 <a href="<?php echo esc_url( get_the_permalink()); ?>" class="service_btn"><span><?php echo esc_html($settings['service_button_text'])?><?php \Elementor\Icons_Manager::render_icon( $settings['services_button_icon'], [ 'aria-hidden' => 'true' ] ); ?></span></a>
                             </div>
                         </div>

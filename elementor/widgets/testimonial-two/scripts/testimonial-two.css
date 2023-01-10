@@ -183,3 +183,8 @@
   font-weight: 400;
   transition: all 0.2s;
 }
+@media (max-width: 991px){
+    .feedback_slider_inner .feedback_content{
+        padding: 22px;
+    }
+}

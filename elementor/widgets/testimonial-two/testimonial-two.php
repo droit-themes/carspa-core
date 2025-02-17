@@ -264,7 +264,7 @@ class DRTH_ESS_Testimonial_two extends Widget_Base {
         $testimonials = isset($settings['testimonials']) ? $settings['testimonials'] : '';
 
     ?>
-        <div class="gallery"> 
+        <div class="gallery-testi"> 
             <div class="swiper-container feedback-slider">
                 <div class="swiper-wrapper">
                     <?php

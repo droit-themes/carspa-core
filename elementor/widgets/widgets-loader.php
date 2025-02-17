@@ -111,12 +111,12 @@ class Widgets_Loader{
                 'css' => [''],
                 'source' => 'addons',
             ],
-            'mini-cart' => [
-                'title' => __( 'Mini Cart', 'carspa-core' ),
-                'js' => [''],
-                'css' => [''],
-                'source' => 'addons',
-            ],
+            // 'mini-cart' => [
+            //     'title' => __( 'Mini Cart', 'carspa-core' ),
+            //     'js' => [''],
+            //     'css' => [''],
+            //     'source' => 'addons',
+            // ],
 
             'nav' => [
                 'title' => __( 'carspa Nav', 'carspa-core' ),

@@ -22,14 +22,4 @@ jQuery(function ($) {
       clickable: true,
     },
   });
-
-  // var thumbs = new Swiper(".swiper-container.gallery-thumbs", {
-  //   slidesPerView: 3,
-  //   spaceBetween: 10,
-  //   centeredSlides: true,
-  //   loop: true,
-  //   slideToClickedSlide: true,
-  // });
-  // slider.controller.control = thumbs;
-  // thumbs.controller.control = slider;
 });
